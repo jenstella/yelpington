@@ -1,0 +1,96 @@
+{
+    "id": "el-cortijo",
+    "name": "El Cortijo",
+    "address": "189 Bank St",
+    "phone number": "802-540-0052",
+    "hours": "4:00 pm - 9:00 pm",
+    "latitude": "44.478120",
+    "longitude": "-73.212010",
+    "notes": [
+      "Great tacos"
+    ]
+  }
+  {
+    "id": "american-flatbread",
+    "name": "American Flatbread",
+    "address": "115 Saint Paul St",
+    "phone number": "802-861-2999",
+    "hours": "12:00 pm - 8:00 pm",
+    "latitude": "44.476470",
+    "longitude": "-73.214290",
+    "notes": [
+      "Great flatbreads"
+    ]
+  }
+  {
+    "id": "hen-of-the-wood",
+    "name": "Hen of the Wood",
+    "address": "55 Cherry St",
+    "phone number": "802-540-0534",
+    "hours": "5:00 pm - 9:00 pm",
+    "latitude": "44.479114",
+    "longitude": "-73.216145",
+    "notes": [
+      "Great spot in town"
+    ]
+  }
+  {
+    "id": "honey-road",
+    "name": "Honey Road",
+    "address": "156 Church St",
+    "phone number": "802-497-2145",
+    "hours": "12:00 pm - 7:00 pm",
+    "latitude": "44.476131",
+    "longitude": "-73.212387",
+    "notes": [
+      "Great spot in town"
+    ]
+  }
+  {
+    "id": "revolution-kitchen",
+    "name": "Revolution Kitchen",
+    "address": "9 Center St",
+    "phone number": "802-540-0534",
+    "hours": "4:30 pm - 8:30 pm",
+    "latitude": "44.477903",
+    "longitude": "-73.211634",
+    "notes": [
+      "Great spot in town"
+    ]
+  }
+  {
+    "id": "pho-hong",
+    "name": "Pho Hong",
+    "address": "325 N Winooski Ave",
+    "phone number": "802-540-0534",
+    "hours": "5:00 pm - 9:00 pm",
+    "latitude": "44.48946",
+    "longitude": "-73.206039",
+    "notes": [
+      "Great spot in town"
+    ]
+  }
+  {
+    "id": "pizzeria-ida",
+    "name": "Pizzeria Ida",
+    "address": "662 Riverside Ave",
+    "phone number": "802-540-0191",
+    "hours": "4:00 pm - 8:00 pm",
+    "latitude": "44.489574",
+    "longitude": "-73.207291",
+    "notes": [
+      "Great spot in town"
+    ]
+  }
+  {
+    "id": "a-single-pebble",
+    "name": "A Single Pebble",
+    "address": "133 Bank Street",
+    "phone number": "802-865-5200",
+    "hours": "5:00 pm - 9:00 pm",
+    "latitude": "44.478165",
+    "longitude": "-73.213417",
+    "notes": [
+      "Great spot in town"
+    ]
+  }
