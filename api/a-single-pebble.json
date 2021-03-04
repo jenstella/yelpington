@@ -1,0 +1,10 @@
+{
+  "id": "a-single-pebble",
+  "name": "A Single Pebble",
+  "address": "133 Bank Street",
+  "phone number": "802-865-5200",
+  "hours": "5:00 pm - 9:00 pm",
+  "latitude": "44.478165",
+  "longitude": "-73.213417",
+  "notes": ["Great spot in town"]
+}

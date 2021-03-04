@@ -1,9 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Map from './Map'
+import Restaurant from './Restaurant'
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
+
 
 function App() {
   return (
-    <h1>Yelpington</h1>
+    <div>
+    <h1>Welcome to Yelpington!</h1>
+    <Map />
+    </div>
   );
 }
 

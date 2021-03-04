@@ -1,0 +1,10 @@
+{
+  "id": "pizzeria-ida",
+  "name": "Pizzeria Ida",
+  "address": "662 Riverside Ave",
+  "phone number": "802-540-0191",
+  "hours": "4:00 pm - 8:00 pm",
+  "latitude": "44.489574",
+  "longitude": "-73.207291",
+  "notes": ["Great spot in town"]
+}
