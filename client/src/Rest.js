@@ -5,16 +5,35 @@ import {useState, useEffect} from 'react'
 //use match property
 
 export default function Rest(props) {
+    const [restInfo, setRestInfo] = useState({
+        id: "",
+        name: "",
+        address: "",
+        phone: "",
+        hours: "",
+        latitude: "",
+        longitude: "",
+        notes: []
+    });
 
-    // fetch('/api/honey-road')
-    // .then((res) => res.json)
-    // .then((selectRest) => {
-    //     console.log(selectRest)
-    // });
+    useEffect(() => {
+        if (restInfo.id === "") {
+            console.log(props.match.params.id)
+            fetch(`/api/${props.match.params.id}`)
+            .then((res) => res.json())
+            .then(restDetails => {
+                setRestInfo(restDetails)
+            })
+        }
+    })
 
     return (
         <div>
-            <h1>Restaurant Page</h1>
+            <h2>{restInfo.name}</h2>
+            <h2>{restInfo.address}</h2>
+            <h2>{restInfo.phone}</h2>
+            <h2>{restInfo.hours}</h2>
+            <h2>{restInfo.notes}</h2>
         </div>
     )
 }

@@ -20,7 +20,7 @@ app.get('/api/:id', (req, res) => {
   });
 
   //to get the page /restaurant-id
-app.get('/api/directory/:id', (req, res) => {
+app.get('/api/:id', (req, res) => {
     res.sendFile(path.resolve(`/api/'${req.params.id}.json`))
 })
 
