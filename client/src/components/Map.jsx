@@ -8,7 +8,7 @@ function Map(props) {
   return (
     <MapContainer
       center={props.center}
-      zoom={12}
+      zoom={13}
       scrollWheelZoom={true}
       doubleClickZoom={true}
       zoomControl={true}
