@@ -7,8 +7,9 @@ const port = process.env.PORT || 5000;
 
 app.use(express.static('public'));
 
-
-
+app.get('/api', (req, res) => {
+    res.sendFile(path.resolve('./api/directory.json'))
+  });
 
 
 

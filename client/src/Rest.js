@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Restaurant() {
+export default function Rest() {
     return (
         <div>
             

@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 function Map(props) {
 
-  const [center, setCenter] = useState([43.88, -72.7317])
+  const [center, setCenter] = useState([44.4759, -73.2121])
 
   return (
     <MapContainer
