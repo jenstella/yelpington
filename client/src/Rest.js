@@ -1,9 +1,10 @@
 import React from 'react'
+import {useState, useEffect} from 'react'
 
 
 //use match property
 
-export default function Rest() {
+export default function Rest(props) {
 
     // fetch('/api/honey-road')
     // .then((res) => res.json)

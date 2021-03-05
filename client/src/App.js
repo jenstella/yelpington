@@ -11,9 +11,9 @@ function App() {
   const [zoom, setZoom] = useState(8);
 
   return (
-    <div>
-    <h1>Welcome to Yelpington!</h1>
-    <Map center={center} zoom={zoom} />
+    <div id="main-div">
+    <h1>Yelpington</h1>
+    <div id="browser">
     <BrowserRouter>
     <NavBar />
         {/* browser router can also go into index.js */}
@@ -21,7 +21,9 @@ function App() {
           <Route path="/restaurant/:name" component={Rest} />
           {/* <Route path="" component={} /> */}
         </Switch>
+        <Map center={center} zoom={zoom} />
       </BrowserRouter>
+      </div>
     </div>
   );
 }

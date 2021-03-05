@@ -6,9 +6,10 @@ function Map(props) {
   const [center, setCenter] = useState([44.4759, -73.2121])
 
   return (
+    <div id="map-container">
     <MapContainer
       center={props.center}
-      zoom={13}
+      zoom={12}
       scrollWheelZoom={true}
       doubleClickZoom={true}
       zoomControl={true}
@@ -45,6 +46,7 @@ function Map(props) {
         </ Marker>
 
     </MapContainer>
+    </div>
   );
 }
 
