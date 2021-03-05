@@ -1,42 +1,42 @@
-import React from 'react'
-import {useState, useEffect} from 'react'
-
+import React from "react";
+import { useState, useEffect } from "react";
+import Map from "./components/Map";
 
 //use match property
 
 export default function Rest(props) {
-    const [restInfo, setRestInfo] = useState({
-        id: "",
-        name: "",
-        address: "",
-        phone: "",
-        hours: "",
-        latitude: "",
-        longitude: "",
-        notes: []
-    });
+  const [restInfo, setRestInfo] = useState({
+    id: "",
+    name: "",
+    address: "",
+    phone: "",
+    hours: "",
+    latitude: "",
+    longitude: "",
+    notes: [],
+  });
 
-    useEffect(() => {
-        if (restInfo.id === "") {
-            console.log(props.match.params.id)
-            fetch(`/api/${props.match.params.id}`)
-            .then((res) => res.json())
-            .then(restDetails => {
-                setRestInfo(restDetails)
-            })
-        }
-    })
+  useEffect(() => {
+    if (restInfo.id === "") {
+      console.log(props.match.params.id);
+      fetch(`/api/${props.match.params.id}`)
+        .then((res) => res.json())
+        .then((restDetails) => {
+          setRestInfo(restDetails);
+        });
+    }
+  });
 
-    return (
-        <div>
-            <h2>{restInfo.name}</h2>
-            <h2>{restInfo.address}</h2>
-            <h2>{restInfo.phone}</h2>
-            <h2>{restInfo.hours}</h2>
-            <h2>{restInfo.notes}</h2>
-        </div>
-    )
+  return (
+    <div>
+      <h2>{restInfo.name}</h2>
+      <h2>{restInfo.address}</h2>
+      <h2>{restInfo.phone}</h2>
+      <h2>{restInfo.hours}</h2>
+      <h2>{restInfo.notes}</h2>
+    </div>
+  );
 }
 
-//do fetch in here /api/id 
+//do fetch in here /api/id
 //then change server to be listening for it

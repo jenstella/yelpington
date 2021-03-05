@@ -21,7 +21,7 @@ function NavBar(props) {
           <h2>Places to Eat</h2>
           {rest.length !== 0 ? rest.map((id, index) => {
             console.log(id)
-            return <h3 id="rest-link" key={index}>
+            return <h3 className="rest-link" key={index}>
               <Link to={`/restaurant/${id}`}>{id.replaceAll("-", " ")}</Link>
             </h3>;
           }) : null}
