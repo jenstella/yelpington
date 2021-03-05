@@ -1,0 +1,12 @@
+// the below will help me with how I am supposed to do above in App.js
+{/* <Route
+          path="/article/:title"
+          render={(props) => {
+            return props.match.isExact ? (
+              <Posts match={props.match} />
+            ) : (
+              <Redirect to="/" />
+            );
+          }}
+        />
+
