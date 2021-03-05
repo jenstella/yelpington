@@ -1,6 +1,6 @@
 import "./App.css";
 import Map from "./components/Map";
-import Rest from "./Rest";
+import Rest from "./components/Rest";
 import NavBar from "./components/NavBar";
 import { BrowserRouter, Route, Switch, Link, Redirect } from "react-router-dom";
 import { useState } from "react";

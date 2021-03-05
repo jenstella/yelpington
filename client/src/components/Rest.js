@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Map from "./components/Map";
+import Map2 from "./Map2";
 
 //use match property
 
@@ -34,9 +34,11 @@ export default function Rest(props) {
       <h2>{restInfo.phone}</h2>
       <h2>{restInfo.hours}</h2>
       <h2>{restInfo.notes}</h2>
+      <Map2
+        lat={restInfo.latitude}
+        long={restInfo.longitude}
+        position={[props.lat, props.long]}
+      />
     </div>
   );
 }
-
-//do fetch in here /api/id
-//then change server to be listening for it
