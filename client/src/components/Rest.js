@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Map2 from "./Map2";
-
+import Map from './Map'
 //use match property
 
 export default function Rest(props) {
@@ -23,6 +22,7 @@ export default function Rest(props) {
         .then((res) => res.json())
         .then((restDetails) => {
           setRestInfo(restDetails);
+          props.setNewZoom({zoomIn: true, zoom: 20, center: [restDetails.latitude, restDetails.longitude]})
         });
     }
   });
@@ -34,11 +34,6 @@ export default function Rest(props) {
       <h2>{restInfo.phone}</h2>
       <h2>{restInfo.hours}</h2>
       <h2>{restInfo.notes}</h2>
-      <Map2
-        lat={restInfo.latitude}
-        long={restInfo.longitude}
-        position={[props.lat, props.long]}
-      />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { useState } from "react";
+import Zoom from './Zoom'
 import { Link } from "react-router-dom";
 
 function Map(props) {
@@ -20,6 +21,7 @@ function Map(props) {
           url="https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png"
           attribution="Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
         />
+        <Zoom center={props.newCenter} zoom={props.newZoom} />
         <Marker position={[44.478165, -73.213417]}>
           <Popup>
             <Link to={`/restaurant/a-single-pebble`}>A Single Pebble</Link>

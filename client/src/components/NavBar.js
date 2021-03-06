@@ -10,6 +10,11 @@ function NavBar(props) {
         .then((res) => res.json())
         .then((restList) => {
           setRest(restList);
+          props.setZoom({
+            zoomIn: false,
+            zoom: 13,
+            center: [44.4759, -73.2121],
+          });
         });
     }
   });
@@ -19,12 +24,21 @@ function NavBar(props) {
       <ul>
         <div>
           <h2>Places to Eat</h2>
-          {rest.length !== 0 ? rest.map((id, index) => {
-            console.log(id)
-            return <h3 className="rest-link" key={index}>
-              <Link to={`/restaurant/${id}`}>{id.replaceAll("-", " ")}</Link>
-            </h3>;
-          }) : null}
+          {rest.length !== 0
+            ? rest.map((id, index) => {
+                console.log(id);
+                return (
+                  <h3 className="rest-link" key={index}>
+                    <Link
+                      style={{ textDecoration: "none", color: "black" }}
+                      to={`/restaurant/${id}`}
+                    >
+                      {id.replaceAll("-", " ")}
+                    </Link>
+                  </h3>
+                );
+              })
+            : null}
         </div>
       </ul>
     </div>
