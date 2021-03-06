@@ -10,14 +10,16 @@ function App() {
   const [zoom, setZoom] = useState({
     zoomIn: false,
     zoom: 13,
-    center: [44.4759, -73.2121]
-  })
-
+    center: [44.4759, -73.2121],
+  });
 
   return (
     <div id="main-div">
       <h1>
-        <a href="/" style={{ textDecoration: "none", color: 'rgb(179, 159, 134)'}}>
+        <a
+          href="/"
+          style={{ textDecoration: "none", color: "rgb(179, 159, 134)" }}
+        >
           Yelpington
         </a>
       </h1>
@@ -25,11 +27,13 @@ function App() {
         <BrowserRouter>
           {/* browser router can also go into index.js */}
           <Switch>
-          <Route exact path="/"
-          render={() => { 
-            return  <NavBar setZoom={setZoom}/>
-          }}
-          />
+            <Route
+              exact
+              path="/"
+              render={() => {
+                return <NavBar setZoom={setZoom} />;
+              }}
+            />
             {/* <Route exact path="/">
               <NavBar />
             </Route> */}
@@ -37,7 +41,7 @@ function App() {
               path="/restaurant/:id"
               render={(props) => {
                 return props.match.isExact ? (
-                  <Rest match={props.match} setNewZoom={setZoom}/>
+                  <Rest match={props.match} setNewZoom={setZoom} />
                 ) : (
                   <Redirect to="/" />
                 );
@@ -45,11 +49,14 @@ function App() {
             />
             {/* <Route path="" component={} /> */}
           </Switch>
-          <Map newZoom={zoom.zoomIn ? zoom.zoom: 13} newCenter={zoom.zoomIn ? zoom.center: [44.4759, -73.2121]}/>
+          <Map
+            newZoom={zoom.zoomIn ? zoom.zoom : 13}
+            newCenter={zoom.zoomIn ? zoom.center : [44.4759, -73.2121]}
+          />
         </BrowserRouter>
       </div>
     </div>
   );
-            }
+}
 
 export default App;

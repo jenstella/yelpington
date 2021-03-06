@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Map from './Map'
+import Map from "./Map";
 //use match property
 
 export default function Rest(props) {
@@ -22,7 +22,11 @@ export default function Rest(props) {
         .then((res) => res.json())
         .then((restDetails) => {
           setRestInfo(restDetails);
-          props.setNewZoom({zoomIn: true, zoom: 20, center: [restDetails.latitude, restDetails.longitude]})
+          props.setNewZoom({
+            zoomIn: true,
+            zoom: 20,
+            center: [restDetails.latitude, restDetails.longitude],
+          });
         });
     }
   });
