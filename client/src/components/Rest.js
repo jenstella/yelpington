@@ -16,7 +16,7 @@ export default function Rest(props) {
   });
 
   useEffect(() => {
-    if (restInfo.id === "") {
+    if (restInfo.id === "" || restInfo.id !== props.match.params.id) {
       console.log(props.match.params.id);
       fetch(`/api/${props.match.params.id}`)
         .then((res) => res.json())
