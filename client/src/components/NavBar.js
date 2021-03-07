@@ -1,9 +1,15 @@
+//imports
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+//NavBar is essentially my "homepage" with list of restaurants and map showing zoomed out.
+
 function NavBar(props) {
+  //setting each restaurant
   const [rest, setRest] = useState([]);
 
+  //fetches in the list of restaurants from the api, converts into usable data "restList"
+  //keeps map zoomed out, centered at downtown burlington still.
   useEffect(() => {
     if (rest.length === 0) {
       fetch("/api")
@@ -19,6 +25,8 @@ function NavBar(props) {
     }
   });
 
+  //return draws in list of restaurants, as links to their page by mapping in each from the restaurant list
+  //styled to get rid of the 'link' look on each restaurant name
   return (
     <div id="nav">
       <ul>

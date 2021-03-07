@@ -15,7 +15,7 @@ code {
 .map {
   height: 100vh;
 }
-
+/* some css styling for the map container, browser to create a flexbox, and the fonts */
 #browser {
   display: flex;
   align-content: center;
