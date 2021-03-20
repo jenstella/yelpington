@@ -7,7 +7,12 @@ const app = express();
 //sets up port
 const port = process.env.PORT || 5000;
 //middleware to build static directory
-app.use(express.static("public"));
+const staticDir = path.resolve("./client/build");
+
+mongoose.connect(process.env.MONGODB_URI, {
+  useNewUrlParser:true,
+  useUnifiedTopology:true
+});
 
 //shows api
 app.get("/api", (req, res) => {
